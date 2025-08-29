@@ -1,7 +1,3 @@
 {
-  "builds": [
-    { "src": "dist/server/node-build.mjs", "use": "@vercel/node" },
-    { "src": "dist/client/**", "use": "@vercel/static" }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "dist/server/node-build.mjs" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
